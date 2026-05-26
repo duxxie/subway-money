@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dljfj2vt7r2vw"]
+
+[ext_resource type="PackedScene" uid="uid://627fosdlbrcd" path="res://scenes/Khan.tscn" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://dxln3p1pvtg2x" path="res://sprites/icon.svg" id="2_0wfyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(800, 40)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0wfyh"]
+blend_mode = 2
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(400, 785)
+
+[node name="FloorCollision" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+material = SubResource("CanvasItemMaterial_0wfyh")
+position = Vector2(0.49998188, 0)
+scale = Vector2(6.2578125, 0.3)
+texture = ExtResource("2_0wfyh")
+
+[node name="Khan" parent="." instance=ExtResource("1_o5qli")]
+position = Vector2(405, 692)

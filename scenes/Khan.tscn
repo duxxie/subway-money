@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://627fosdlbrcd"]
+
+[ext_resource type="Script" uid="uid://brnw73qep37df" path="res://scripts/khan.gd" id="1_nf5bm"]
+[ext_resource type="Texture2D" uid="uid://dxln3p1pvtg2x" path="res://sprites/icon.svg" id="1_u1i4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmodi"]
+size = Vector2(120, 121)
+
+[node name="Khan" type="CharacterBody2D"]
+script = ExtResource("1_nf5bm")
+
+[node name="KhanCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_hmodi")
+
+[node name="KhanSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_u1i4f")
